@@ -62,11 +62,30 @@ Therefore, I went with the training on EfficientDet D2. Even on D2, I had to kee
 
 ## Training
 
-The training was set up with pretrained weights [efficientdet-d2.pth](https://github.com/zylo117/Yet-Another-Efficient-Pytorch/releases/download/1.0/efficientdet-d2.pth)
+The training was set up with pretrained COCO weights [efficientdet-d2.pth](https://github.com/zylo117/Yet-Another-Efficient-Pytorch/releases/download/1.0/efficientdet-d2.pth)
 
     # train efficientdet-d2 on playing cards dataset 
     # with batchsize 1, learning rate 1e-5 and 200 epochs
 
+    python train.py -c 2 -p project_tester --batch_size 1 --lr 1e-5 --num_epochs 200 --load_weights weightload/efficientdet-d2.pth
+
+You can also set the `--debug True` and the predictions will be saved in the `test` folder. The weights will be saved in `logs/project_cards`. 
+
+### Early Stopping
+
+    # while training, press Ctrl+c, the program will catch KeyboardInterrupt
+    # and stop training, save current checkpoint.
+
+### Resume Training
+
+    # If want to resume training from the last checkpoint
+    # simply set load_weights to 'last'
+
+    python train.py -c 2 -p project_tester --batch_size 1 --lr 1e-5 --num_epochs 200 --load_weights last
+
+### Training Preview
+
+<img src="trainingimg.png">
 
 
 
