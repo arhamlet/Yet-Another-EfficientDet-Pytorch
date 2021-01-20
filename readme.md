@@ -2,6 +2,18 @@
 
 The pytorch re-implement of the official [EfficientDet](https://github.com/google/automl/tree/master/efficientdet) with SOTA performance in real time, original paper link: <https://arxiv.org/abs/1911.09070>
 
+# Training Custom dataset of Playing Cards on EfficientDetD2
+
+I trained the Efficientdet D2 on Playing Cards dataset. The information regarding the dataset, the whole training process and the evaluation results are discussed in the ensuing sections.
+
+##Dataset
+
+The Playing Cards dataset was downloaded from kaggle. Link: (https://www.kaggle.com/luantm/playing-card). The classes include nine, ten, jack, queen, king and ace. 
+
+#Preprocessing Dataset
+The labels for the dataset were available in the '.xml' format. So, in order to train the data on this implementation, I first had to create the annotations file for this dataset in the 'COCO json' format. I used the [VOC2COCO converter](https://github.com/yukkyo/voc2coco). However, I had to make a couple of tweaks to the code to get the accurate format.
+
+
 ## Having troubles training? I might train it for you
 
 If you have troubles training a dataset, and if you are willing to share your dataset with the public or it's open already, post it on Issues with `help wanted` tag, I might try to help train it for you, if I'm free, which is not guaranteed.
