@@ -10,9 +10,11 @@ The Playing Cards dataset was downloaded from kaggle. Link: (https://www.kaggle.
 
 ## Preprocessing Dataset
 
-The labels for the dataset were available in the '.xml' format. So, in order to train the data on this implementation, I first had to create the annotations file for this dataset in the 'COCO json' format. I used the [VOC2COCO converter](https://github.com/yukkyo/voc2coco). However, I had to make a couple of tweaks to the code to get the accurate format.
-Place the xml files in the Annotations(create this folder) folder. Create a txt file contatining the names of the xml files and run 'python voc2coco.py Annotations instances_{train/val}.json'. You'll get the annotations in the output json file(instances_train and instances_val).
+The labels for the dataset were available in the `.xml` format. So, in order to train the data on this implementation, I first had to create the annotations file for this dataset in the `COCO json` format. I used the [VOC2COCO converter](https://github.com/yukkyo/voc2coco). However, I had to make a couple of tweaks to the code to get the accurate format.
+Place the xml files in the Annotations(create this folder) folder. Create a txt file contatining the names of the xml files and run `python voc2coco.py Annotations instances_{train/val}.json`. You'll get the annotations in the output json file(instances_train and instances_val).
 The category id should start with 1 in this format. That was also implemented in the conversion. 
+
+## Setting up the project
 
     # your dataset structure should be like this
     datasets/
@@ -42,6 +44,12 @@ The category id should start with 1 in this format. That was also implemented in
 
 ## Setting up project Parameters
 
+Created a `yml` file in the projects folder and specified the path to train set, val set and the annotations. 
+
+## EfficientDet D2
+
+I started with an effort to implement the D6 but after some memory errors and research, I found out that my GPU(2060 super) doesn't have enough memory to run D6. EfficientDet requires a lot of computing power as the coefficient of the effiecientdet increase. 
+Therefore, I went with the training on EfficientDet D2. Even on D2, I had to keep the batch_size to 1. 
 
 
 
