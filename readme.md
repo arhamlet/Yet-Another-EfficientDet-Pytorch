@@ -136,6 +136,10 @@ Here is a preview of our predictions.
 
 You can use the following command to preview the results on the tensorboard: `tensorboard --logdir=logs/project_cards/tensorboard`
 
+## Testing
+
+The efficientdet_test file was updated according to our project. You just have to place the test images in the test folder and run `python efficientdet_test.py`.
+
 
 ## Reference
 - [zylo117/Yet-Another-EfficientDet-Pytorch](https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch)
