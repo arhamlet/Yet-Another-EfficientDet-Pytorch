@@ -31,7 +31,7 @@ EfficientDet use the backbone of the EfficientNets with the BiFPNs. The BiFPN se
 
 Compound scaling has been proposed for detection that involves a compound coefficient ϕ to scale up all the dimensions of backbone network, BiFPN network, class/box network as well as resolution.
 
-## My Project
+## Project Playing Cards
 
 I trained the Efficientdet D2 on Playing Cards dataset. The information regarding the dataset, the whole training process and the evaluation results are discussed in the ensuing sections.
 
@@ -84,7 +84,7 @@ The category id should start with 1 in this format. That was also implemented in
 
 ## Setting up project Parameters
 
-Created a `yml` file in the projects folder and specified the path to train set, val set and the annotations. 
+Created a `yml` file named `project_cards.yml` in the projects folder. The path to train set, val set and the annotations as well as the objects list is specified in this yml file.
 
 ## EfficientDet D2
 
@@ -146,7 +146,7 @@ After the completion of the training, the network recognized the cards with grea
 
 
 ## Predictions Preview
-Here is a preview of our predictions.
+Here is a preview of the model predictions.
 
 <img src="predictions.png">
 
@@ -156,7 +156,7 @@ You can use the following command to preview the results on the tensorboard: `te
 
 ## Testing
 
-The efficientdet_test file was updated according to our project. You just have to place the test images in the test folder and run `python efficientdet_test.py`.
+The efficientdet_test file was updated according to the project. You just have to place the test images in the test folder and run `python efficientdet_test.py`.
 
 
 ## Reference
