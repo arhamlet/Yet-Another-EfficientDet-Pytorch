@@ -110,6 +110,8 @@ The training was stopped at the 170th epoch.
     
     python project_eval.py -p project_cards -c 2 -w /path/to/your/weights
 
+## My Weights
+
 I have uploaded my weights file: `efficientdet-d2_cards.pth`. So, run
 
     python project_eval.py -p project_cards -c 2 -w efficientdet-d2_cards.pth
@@ -123,6 +125,8 @@ After the completion of the training, the network recognized the cards with grea
 
 ## Predictions Preview
 Here is a preview of our predictions.
+
+<img src="predictions.png">
 
 
 ## Reference
