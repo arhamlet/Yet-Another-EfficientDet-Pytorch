@@ -15,6 +15,12 @@ The research done in this paper and the excellent results displayed by the Effic
 
 	In this paper, we are introduced to the EfficientDet that gice state-of-the-art performance with improved accuracy and efficiency.
 
+Moreover, weighted feature fusion is also introduced in the paper. It involves assigning different weights to different feature maps and then make them trainable to get the optimal results. For this purpose three strategies were propesed:
+
+1. Unbounded Fusion: In this case, the weight can be a scalar, vector or a multi-dimensional tensor applied on every feature, channel or pixel respectively.
+2. Softmax-based Fusion: Using softmax to bound the unbounded weights between 0 and 1. 
+3. Fast Normalized Fusion: As softmax is computationally expensive, use a Relu at the weight and then normalize it so that the upper limit is one.
+
 I trained the Efficientdet D2 on Playing Cards dataset. The information regarding the dataset, the whole training process and the evaluation results are discussed in the ensuing sections.
 
 ## Requirements
