@@ -132,6 +132,10 @@ Here is a preview of our predictions.
 
 <img src="predictions.png">
 
+## Tensorboard
+
+You can use the following command to preview the results on the tensorboard: `tensorboard --logdir=logs/project_cards/tensorboard`
+
 
 ## Reference
 - [zylo117/Yet-Another-EfficientDet-Pytorch](https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch)
