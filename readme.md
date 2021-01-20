@@ -1,14 +1,18 @@
 # Training Custom dataset of Playing Cards on EfficientDetD2
 
-The pytorch re-implement of the official [EfficientDet](https://github.com/google/automl/tree/master/efficientdet) with SOTA performance in real time, original paper link: <https://arxiv.org/abs/1911.09070>
+The pytorch re-implement of the official [EfficientDet](https://github.com/google/automl/tree/master/efficientdet) with SOTA performance in real time, original paper link: <https://arxiv.org/abs/1911.09070>.
+
 The research done in this paper and the excellent results displayed by the Efficientdets are due to these contributions of the paper:
 1. Bi-didrectional Feature Pyramid Network (BiFPN)
+
 These are used for the multiple feature scaling in the network. They have been built upon the Feature Pyramid Network(FPN) and PANet. 
 
 2. Compound Scaling
+
 Compound Scaling was first proposed in the `EfficientNet` paper. It involves increasing the depth/width/resolution of the whole network including the backbone, feature network, class/box network and resolution.
 
 3. EfficientDet
+
 In this paper, we are introduced to the EfficientDet that gice state-of-the-art performance with improved accuracy and efficiency.
 
 I trained the Efficientdet D2 on Playing Cards dataset. The information regarding the dataset, the whole training process and the evaluation results are discussed in the ensuing sections.
