@@ -11,6 +11,40 @@ The Playing Cards dataset was downloaded from kaggle. Link: (https://www.kaggle.
 ## Preprocessing Dataset
 
 The labels for the dataset were available in the '.xml' format. So, in order to train the data on this implementation, I first had to create the annotations file for this dataset in the 'COCO json' format. I used the [VOC2COCO converter](https://github.com/yukkyo/voc2coco). However, I had to make a couple of tweaks to the code to get the accurate format.
+Place the xml files in the Annotations(create this folder) folder. Create a txt file contatining the names of the xml files and run 'python voc2coco.py Annotations instances_{train/val}.json'. You'll get the annotations in the output json file(instances_train and instances_val).
+The category id should start with 1 in this format. That was also implemented in the conversion. 
+
+    # your dataset structure should be like this
+    datasets/
+        -your_project_name/
+            -train_set_name/
+                -*.jpg
+            -val_set_name/
+                -*.jpg
+            -annotations
+                -instances_{train_set_name}.json
+                -instances_{val_set_name}.json
+
+    # for example, in our case,
+    datasets/
+        -project_cards/
+            -train/
+                -cam_image2.jpg
+                -cam_image4.jpg
+                -cam_image5.jpg
+            -val/
+                -IMG_2554.jpg
+                -IMG_2555.jpg
+                -IMG_2557.jpg
+            -annotations
+                -instances_train.json
+                -instances_val.json
+
+## Setting up project Parameters
+
+
+
+
 
 
 ## Having troubles training? I might train it for you
