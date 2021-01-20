@@ -1,6 +1,15 @@
 # Training Custom dataset of Playing Cards on EfficientDetD2
 
 The pytorch re-implement of the official [EfficientDet](https://github.com/google/automl/tree/master/efficientdet) with SOTA performance in real time, original paper link: <https://arxiv.org/abs/1911.09070>
+The research done in this paper and the excellent results displayed by the Efficientdets are due to these contributions of the paper:
+1. Bi-didrectional Feature Pyramid Network (BiFPN)
+These are used for the multiple feature scaling in the network. They have been built upon the Feature Pyramid Network(FPN) and PANet. 
+
+2. Compound Scaling
+Compound Scaling was first proposed in the `EfficientNet` paper. It involves increasing the depth/width/resolution of the whole network including the backbone, feature network, class/box network and resolution.
+
+3. EfficientDet
+In this paper, we are introduced to the EfficientDet that gice state-of-the-art performance with improved accuracy and efficiency.
 
 I trained the Efficientdet D2 on Playing Cards dataset. The information regarding the dataset, the whole training process and the evaluation results are discussed in the ensuing sections.
 
@@ -51,6 +60,12 @@ Created a `yml` file in the projects folder and specified the path to train set,
 I started with an effort to implement the D6 but after some memory errors and research, I found out that my GPU(2060 super) doesn't have enough memory to run D6. EfficientDet requires a lot of computing power as the coefficient of the effiecientdet increase. 
 Therefore, I went with the training on EfficientDet D2. Even on D2, I had to keep the batch_size to 1. 
 
+## Training
+
+The training was set up with pretrained weights [efficientdet-d2.pth](https://github.com/zylo117/Yet-Another-Efficient-Pytorch/releases/download/1.0/efficientdet-d2.pth)
+
+    # train efficientdet-d2 on playing cards dataset 
+    # with batchsize 1, learning rate 1e-5 and 200 epochs
 
 
 
