@@ -2,6 +2,8 @@
 
 The pytorch re-implement of the official [EfficientDet](https://github.com/google/automl/tree/master/efficientdet) with SOTA performance in real time, original paper link: <https://arxiv.org/abs/1911.09070>.
 
+## EfficientDet Paper
+
 The research done in this paper and the excellent results displayed by the Efficientdets are due to these contributions of the paper:
 1. Bi-didrectional Feature Pyramid Network (BiFPN)
 
@@ -13,13 +15,23 @@ The research done in this paper and the excellent results displayed by the Effic
 
 3. EfficientDet
 
-	In this paper, we are introduced to the EfficientDet that gice state-of-the-art performance with improved accuracy and efficiency.
+	In this paper, we are introduced to the EfficientDet that give state-of-the-art performance with improved accuracy and efficiency.
 
 Moreover, weighted feature fusion is also introduced in the paper. It involves assigning different weights to different feature maps and then make them trainable to get the optimal results. For this purpose three strategies were propesed:
 
 1. Unbounded Fusion: In this case, the weight can be a scalar, vector or a multi-dimensional tensor applied on every feature, channel or pixel respectively.
 2. Softmax-based Fusion: Using softmax to bound the unbounded weights between 0 and 1. 
 3. Fast Normalized Fusion: As softmax is computationally expensive, use a Relu at the weight and then normalize it so that the upper limit is one.
+
+### EfficientDet2 Architecture
+
+<img src="architecture.png">
+
+EfficientDet use the backbone of the EfficientNets with the BiFPNs. The BiFPN serves as the feature network. It takes features from the P3-P7 of the backbone network and applies feature fusion. These features are then passed on to the Class/Box network to give class and bounding box predictions.
+
+Compound scaling has been proposed for detection that involves a compound coefficient ϕ to scale up all the dimensions of backbone network, BiFPN network, class/box network as well as resolution.
+
+## My Project
 
 I trained the Efficientdet D2 on Playing Cards dataset. The information regarding the dataset, the whole training process and the evaluation results are discussed in the ensuing sections.
 
