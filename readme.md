@@ -25,7 +25,7 @@ Moreover, weighted feature fusion is also introduced in the paper. It involves a
 
 ### EfficientDet2 Architecture
 
-<img src="architecture.png">
+<img src="images/architecture.png">
 
 EfficientDet use the backbone of the EfficientNets with the BiFPNs. The BiFPN serves as the feature network. It takes features from the P3-P7 of the backbone network and applies feature fusion. These features are then passed on to the Class/Box network to give class and bounding box predictions.
 
@@ -116,13 +116,13 @@ You can also set the `--debug True` and the predictions will be saved in the `te
 
 ### Training Preview
 
-<img src="trainingimg.png">
+<img src="images/trainingimg.png">
 
 ### Training Completion
 
 By the 150th epoch, the loss started to converge and the learning rate went down to 1e-7(lr scheduler implemented). 
 
-<img src="trainingimg2.png">
+<img src="images/trainingimg2.png">
 
 The training was stopped at the 170th epoch. 
 
@@ -142,13 +142,13 @@ I have uploaded my weights file: `efficientdet-d2_cards.pth`. So, run
 
 After the completion of the training, the network recognized the cards with great accuracy and precision. The results( Average Precision and Average Recall) were as follows:
 
-<img src="evaluation.png">
+<images/img src="evaluation.png">
 
 
 ## Predictions Preview
 Here is a preview of the model predictions.
 
-<img src="predictions.png">
+<img src="images/predictions.png">
 
 ## Tensorboard
 
